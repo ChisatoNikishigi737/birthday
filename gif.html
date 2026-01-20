@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GIF page</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+      gap: 30px;
+      padding: 40px 20px;
+      text-align: center;
+      position: relative;
+      background-image: url('C:\\Users\\ADMIN\\Documents\\images\\dogo.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+    }
+    
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.75);
+      z-index: 0;
+    }
+    
+    body > * {
+      position: relative;
+      z-index: 1;
+    }
+    
+    h1 {
+      font-size: 2.5rem;
+      margin: 0;
+      color: #333;
+      text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
+    }
+    
+    h2 {
+      font-size: 1.3rem;
+      font-weight: normal;
+      margin: 0;
+      color: #272626;
+      max-width: 700px;
+    }
+    
+    /* GIF laterali fisse */
+    .gif-side {
+      position: fixed;
+      max-width: 180px;
+      height: auto;
+      top: 50%;
+      transform: translateY(-50%);
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      z-index: 10;
+    }
+    
+    .gif-side.left {
+      left: 20px;
+    }
+    
+    .gif-side.right {
+      right: 20px;
+    }
+    
+    /* Container GIF centrali */
+    .gif-container {
+      display: flex;
+      gap: 25px;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    /* GIF centrale principale */
+    .gif-main {
+      max-width: min(450px, 80vw);
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+    
+    /* GIF accanto a quella centrale */
+    .gif-secondary {
+      max-width: min(280px, 35vw);
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+    
+    /* Link */
+    a {
+      font-weight: bold;
+      text-decoration: none;
+      color: #0066cc;
+      font-size: 1.1rem;
+      padding: 10px 20px;
+      border-radius: 8px;
+      transition: background 0.3s;
+    }
+    
+    a:hover {
+      background: rgba(0, 102, 204, 0.1);
+    }
+    
+    /* Responsive */
+    @media (max-width: 1100px) {
+      .gif-side {
+        display: none;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2rem;
+      }
+      
+      h2 {
+        font-size: 1.1rem;
+      }
+      
+      .gif-secondary {
+        max-width: min(200px, 40vw);
+      }
+      
+      .gif-container {
+        gap: 15px;
+      }
+    }
+    
+    @media (max-width: 500px) {
+      .gif-secondary {
+        display: none;
+      }
+      
+      .gif-main {
+        max-width: 90vw;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Tantissimi auguri! 🎉</h1>
+  <h2>Che questo giorno ti porti tanti sorrisi e momenti felici come questi gif!</h2>
+
+  <!-- GIF laterali fisse -->
+  <img class="gif-side left" src="C:\Users\ADMIN\Documents\images\wishes.gif" alt="GIF decorativa sinistra" />
+  <img class="gif-side right" src="C:\Users\ADMIN\Documents\images\happy-birthday-donald-trump.gif" alt="GIF decorativa destra" />
+
+  <!-- Container GIF centrali -->
+  <div class="gif-container">
+    <!-- GIF sinistra del centro -->
+    <img class="gif-secondary" src="C:\Users\ADMIN\Documents\images\cake.gif" alt="GIF sinistra" />
+    
+    <!-- GIF centrale principale -->
+    <img class="gif-main" src="C:\Users\ADMIN\Documents\images\wolf-dance.gif" alt="GIF principale" />
+    
+    <!-- GIF destra del centro -->
+    <img class="gif-secondary" src="C:\Users\ADMIN\Documents\images\confetti-style.gif" alt="GIF destra" />
+  </div>
+
+  <a href="index.html">⬅ Torna alla home</a>
+
+</body>
+</html>
